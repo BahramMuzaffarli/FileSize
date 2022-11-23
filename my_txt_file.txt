@@ -1,0 +1,3 @@
+please write a program that reads a text file containing some text and for each word in the file counts how many times it
+appears. please note you can use a dictionary structure. before starting to count words it might be necessary to delete
+punctuation and special symbols (new line, tab etc.) and put all words in lower case.
