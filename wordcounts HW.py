@@ -3,7 +3,7 @@ text = open("my_txt_file.txt", "r")
 
 d = dict()
 
-for line in text:
+for line  in text:
     words = line.split(" ")
 
     for word in words:
