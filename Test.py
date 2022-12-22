@@ -1,19 +1,10 @@
-import os
+import pandas as pd
+test= pd.read_csv('C:\\Users\\FX505DT\\Desktop\\my1.csv')
+#print(test)
 
-# folder path
-dir_path = r'C:\Users\FX505DT\Desktop'
-count = 1
-# Iterate directory
-for path in os.listdir(dir_path):
-    # check if current path is a file
-    if os.path.isfile(os.path.join(dir_path, path)):
-        count += 1
-print('File count:', count)
+if {'Open','Close'}.issubset(test.columns):
+    test['Change'] = (test['Close'] - test['Open'])/test['Open']
 
-### I must add subfolders count
-### Show space occupied
+print(test)
 
-def getfilesize (filename):
-    return os.stat(filename).st_size
-size = getfilesize('C:/Users/FX505DT/Desktop')
-print(f'FileSize: {size}')
+test.to_csv('C:\\Users\\FX505DT\\Desktop\\output.csv')
